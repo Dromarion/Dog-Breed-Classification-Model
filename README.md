@@ -1,5 +1,3 @@
-# The-Dog-Breed-Classification-Model 
-# aka 
 # DOG VISION ULTIMATE:tm:
 
 ## About the Project
