@@ -4,7 +4,7 @@
 I like dogs but am no good at identifying breeds so for the good of science I must endeavor to train a machine to identify breeds of dogs with a greater accuracy than I ever could.
 
 ## The Dataset
-The dataset used in training contains the images of the 120 dog breeds of the Stanford Dogs Dataset and is augmented with 6 additional breeds from the Oxford-IIIT Pet Dataset not were not in the original Stanford Dataset. The breeds in the Stanford Dataset have approximately 150 images per breed while the breeds from the Oxford dataset have approximately 200 per breed. For completeness I've also added 200 images of the Siberian Husky Breed to the dataset downloaded from images.cv.
+The dataset used in training contains the images of the 120 dog breeds of the Stanford Dogs Dataset and is augmented with 6 additional breeds from the Oxford-IIIT Pet Dataset that were not in the original Stanford Dataset. The breeds in the Stanford Dataset have approximately 150 images per breed while the breeds from the Oxford dataset have approximately 200 per breed. For completeness I've also added 200 images of the Siberian Husky Breed to the dataset downloaded from images.cv.
 
 The breeds from the Oxford Dataset are the American Bulldog, American Pit Bull Terrier, English Cocker Spaniel, Havanese, Scottish Terrier and the Shiba Inu.
 
