@@ -1,4 +1,6 @@
-# The-Dog-Breed-Classification-Model aka DOG VISION ULTIMATE:tm:
+# The-Dog-Breed-Classification-Model 
+# aka 
+# DOG VISION ULTIMATE:tm:
 
 ## About the Project
 I like dogs but am no good at identifying breeds so for the good of science I must endeavor to train a machine to identify breeds of dogs with a greater accuracy than I ever could.
