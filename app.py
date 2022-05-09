@@ -2,7 +2,6 @@ import streamlit as st
 from PIL import Image
 import tensorflow as tf
 
-st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.title("DOG VISION ULTIMATE:tm:")
 
