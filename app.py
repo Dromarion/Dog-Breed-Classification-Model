@@ -1,7 +1,6 @@
 import streamlit as st
 from PIL import Image
 import tensorflow as tf
-import matplotlib.pyplot as plt
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
@@ -163,9 +162,7 @@ def pred_and_plot(model, filename, class_names=class_names):
   pred_class = class_names[pred.argmax()]
 
   # Plot the image and predicted class
-  plt.imshow(img / 255.)
-  plt.title(f"Prediction: {pred_class}")
-  plt.axis(False)
+  st.image(img/255., caption=pred_class)
 
 
 file = st.file_uploader("Upload Dog Image", type=["jpg", "png"])
@@ -173,4 +170,4 @@ file = st.file_uploader("Upload Dog Image", type=["jpg", "png"])
 if file is None:
  pass
 else:
- st.pyplot(pred_and_plot(model=model, filename=file))
+ pred_and_plot(model=model, filename=file)
