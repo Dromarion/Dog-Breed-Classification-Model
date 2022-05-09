@@ -134,7 +134,7 @@ class_names = ['Afghan_hound',
                'whippet',
                'wire-haired_fox_terrier']
 
-model = tf.keras.models.load_model("model")
+model = tf.keras.models.load_model("model.h5")
 
 
 def load_and_prep_image(filename, img_shape=224):
