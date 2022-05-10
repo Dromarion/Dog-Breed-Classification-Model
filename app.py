@@ -142,6 +142,7 @@ def load_and_prep_image(filename, img_shape=224):
   """
   filename = Image.open(filename)
   img = filename.resize((img_shape,img_shape))
+  img = img.convert("RGB")
   img = tf.keras.preprocessing.image.img_to_array(img)
   return img
 
