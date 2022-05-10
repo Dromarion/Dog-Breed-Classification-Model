@@ -5,6 +5,7 @@ import tensorflow as tf
 
 st.title("DOG VISION ULTIMATE:tm:")
 
+# Define Class Names
 class_names = ['Afghan_hound',
                'African_hunting_dog',
                'Airedale',
@@ -132,8 +133,14 @@ class_names = ['Afghan_hound',
                'whippet',
                'wire-haired_fox_terrier']
 
+# Load model
 model = tf.keras.models.load_model("model.h5")
 
+def breed_title(label):
+  """
+  Transforms breed labels into proper syntax for titles
+  """
+  return label.replace("_"," ").title()
 
 def load_and_prep_image(filename, img_shape=224):
   """
@@ -146,12 +153,14 @@ def load_and_prep_image(filename, img_shape=224):
   img = tf.keras.preprocessing.image.img_to_array(img)
   return img
 
-
 def pred_and_plot(model, filename, class_names=class_names):
   """
   Imports an image located at filename, makes a prediction on it with
-  a trained model and plots the image with the predicted class as the title.
+  a trained model and plots the image with the best guess of predicted class.
   """
+  # Save original image for display
+  original_img = Image.open(filename)
+
   # Import the target image and preprocess it
   img = load_and_prep_image(filename)
 
@@ -162,12 +171,16 @@ def pred_and_plot(model, filename, class_names=class_names):
   pred_class = class_names[pred.argmax()]
 
   # Plot the image and predicted class
-  st.image(img/255., caption=pred_class)
+  st.image(original_img)
+  st.write(f"Best Guess is: {breed_title(pred_class)}")
 
 
+# Set File Uploader
 file = st.file_uploader("Upload Dog Image", type=["jpg", "png"])
 
+# Page Behavior
 if file is None:
  pass
 else:
  pred_and_plot(model=model, filename=file)
+
